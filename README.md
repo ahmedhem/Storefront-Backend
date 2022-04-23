@@ -1,1 +1,1 @@
-# -Udacity-Build-a-Storefront-Backend
+# Udacity-Build-a-Storefront-Backend
