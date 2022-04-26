@@ -1,9 +1,16 @@
 {
   "dev": {
     "driver": "pg",
+    "host": "127.0.0.1",
+    "database": "storefront_dev",
     "user": "postgres",
-    "password": "password",
-    "host": "localhost",
-    "database": "migrationdb"
+    "password": "8773"
+  },
+  "test": {
+    "driver": "pg",
+    "host": "127.0.0.1",
+    "database": "storefront_test",
+    "user": "postgres",
+    "password": "8773"
   }
 }
