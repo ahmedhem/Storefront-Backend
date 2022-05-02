@@ -1,7 +1,6 @@
 import { Client } from '../database'
 import dotenv from 'dotenv'
 const bcrypt = require('bcrypt')
-import bcrypt from 'bcrypt'
 export type user = {
   user_id?: number
   firstname: string
