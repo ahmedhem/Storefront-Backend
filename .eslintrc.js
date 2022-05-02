@@ -17,6 +17,10 @@ module.exports = {
     'prettier/prettier': 2, // Means error
     'no-console': 1, // Means warning
     'no-var': 'error',
-    'prefer-const': 'error'
+    'prefer-const': 'error',
+    '@typescript-eslint/no-var-requires': 0,
+    '@typescript-eslint/no-non-null-assertion': 'off'
+
+
   }
 }

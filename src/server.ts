@@ -1,25 +1,25 @@
 import express, { Application, Request, Response } from 'express'
 import morgan from 'morgan'
+import bodyParser from 'body-parser'
 import * as dotenv from 'dotenv'
+import routes from './router/api'
 
 dotenv.config()
 
 const PORT = process.env.PORT || 3000
-// create an instance server
 const app: Application = express()
-// HTTP request logger middleware
 app.use(morgan('short'))
+app.use(bodyParser.urlencoded({ extended: false }))
 
-// add routing for / path
+// parse application/json
+app.use(bodyParser.json())
+app.use('/api', routes)
 app.get('/', (req: Request, res: Response) => {
   res.json({
     message: 'Hello World 🌍 Magdy'
   })
 })
 
-// start express server
-app.listen(PORT, () => {
-  console.log(`Server is starting at prot:${PORT}`)
-})
+app.listen(PORT)
 
 export default app

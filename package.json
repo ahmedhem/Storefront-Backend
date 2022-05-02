@@ -3,12 +3,12 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "watch": "tsc-watch --esModuleInterop src/server.ts --outDir ./dist --onSuccess 'node ./dist/server.js'",
+    "watch": "tsc-watch --esModuleInterop src/server.ts --outDir ./dist --onSuccess \"node ./dist/server.js\"",
     "test": "set ENV=test&&  db-migrate down -c 5  --env  test && db-migrate up -c 5 --env test  && yarn build&& jasmine-ts ",
     "dev": "nodemon src/server.ts",
     "clean": "rimraf build/",
     "build": "yarn clean && npx tsc",
-    "start": "npm run build && nodemon build/index.js",
+    "start": "npm run build && nodemon build/server.js",
     "format": "prettier --write \"src/**/*.ts\"",
     "lint": "eslint . --ext .ts"
   },
@@ -17,8 +17,10 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@types/jsonwebtoken": "^8.5.8",
     "@types/pg": "^8.6.5",
     "bcrypt": "^5.0.1",
+    "body-parser": "^1.20.0",
     "cross-env": "^7.0.3",
     "db-migrate": "^0.11.13",
     "db-migrate-pg": "^1.2.2",
@@ -26,6 +28,7 @@
     "express": "^4.17.1",
     "jasmine": "^3.10.0",
     "jasmine-spec-reporter": "^7.0.0",
+    "jsonwebtoken": "^8.5.1",
     "morgan": "^1.10.0",
     "pg": "^8.7.3",
     "supertest": "^6.1.6",
