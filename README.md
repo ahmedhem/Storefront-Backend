@@ -10,6 +10,8 @@ Jasmine and Super set for testing
 
 PostgreSQL
 
+Restful API
+
 ### To initialize the project
 - npm install
 
