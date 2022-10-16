@@ -1,4 +1,4 @@
-# Udacity: Build A Storefront Backend
+# Build A Storefront Backend
 
 ## Tools and technologies used in the project
 
